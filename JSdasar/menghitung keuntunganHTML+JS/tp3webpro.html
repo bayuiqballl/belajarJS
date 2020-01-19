@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TP Mod 3</title>
+  </head>
+  <body>
+    <form name="form">
+    <table >
+      <thead>
+          <tr>
+              <th colspan="2"><h4>Menghitung Presentase Keuntungan</h4></th>
+          </tr>
+      </thead>
+          <tbody>
+        <tr>
+            <td>
+              <label for="">Modal Uang </label>
+            </td>
+            <td>:</td>
+            <td>
+              <input type="text" name="modal" >
+            </td>
+        </tr>
+        <tr>
+          <td><label for="">Pendapatan </label></td>
+          <td>:</td>
+          <td><input type="text" name="pendapatan" ></td>
+        </tr>
+        <tr>
+          <td><label for="">Keuntungan </label></td>
+          <td>:</td>
+          <td><input type="text" name="untung" value=""></td>
+        </tr>
+        <tr>
+          <td><label for="">Keuntungan(%) </label></td>
+          <td>:</td>
+          <td><input type="text" name="persen" value=""></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="submit" onclick="hitung()" >Hitung Persentase Keuntungan</button></td>
+        </tr>
+      </tbody>
+    </table>
+    </form>
+
+    <script type="text/javascript">
+      function hitung(){
+        a = eval(form.modal.value);
+        b = eval(form.pendapatan.value);
+        c = a - b;
+        d = c / a * 100;
+        form.untung.value = c ;
+        form.persen.value = d ;
+      }
+    </script>
+
+
+
+
+  </body>
+</html>
